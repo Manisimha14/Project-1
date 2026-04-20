@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-white min-h-screen overflow-x-hidden;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 shadow-2xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-600 active:scale-95 text-white font-semibold py-2 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-blue-500/30;
+  }
+
+  .input-field {
+    @apply bg-white/10 border border-white/20 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-white/50 transition-all text-white;
+  }
+}
+
+.weather-gradient-sunny {
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+}
+
+.weather-gradient-cloudy {
+  background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+}
+
+.weather-gradient-rainy {
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+}
+
+.weather-gradient-clear {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
